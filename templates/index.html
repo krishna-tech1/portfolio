@@ -121,12 +121,30 @@ Technologies: Python, FastAPI, SQLAlchemy, Google OAuth, SQLite, HTML, CSS      
     <!-- Contact Section -->
     <section id="contact" class="section">
         <h2>Contact</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn secondary">Send Message</button>
-        </form>
+
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="87b839a9-12ef-4e70-83dd-46ff24d2b2e3">
+
+    <!-- Optional -->
+    <input type="hidden" name="subject" value="New Portfolio Contact Message">
+    <input type="hidden" name="from_name" value="Muthu Krishnan Portfolio">
+
+    <!-- Form Fields -->
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+
+    <!-- Anti-spam -->
+    <input type="checkbox" name="botcheck" style="display:none">
+
+    <button type="submit" class="btn secondary">Send Message</button>
+    <input type="hidden" name="redirect" value="https://your-vercel-url.vercel.app/index.html">
+
+</form>
+
 
        <div class="contact-links">
     <a href="mailto:muthukrishnan8733@gmail.com" target="_blank" class="contact-item">
